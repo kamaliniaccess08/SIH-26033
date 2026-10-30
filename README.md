@@ -1,7 +1,7 @@
 # Smart India Hackathon Workshop
-# Date:30-10-2026
-## Register Number:26009701
-## Name:KAMALINI V
+## Name: KAMALINI V
+## Reg No: 26009701
+# Date: 30-10-2026
 ## Problem Title
 SIH 25010: Smart Crop Advisory System for Small and Marginal Farmers
 ## Problem Description
@@ -41,16 +41,72 @@ Government of Punjab
 Agriculture, FoodTech & Rural Development
 
 ## Proposed Solution
-A mobile-first AI platform for small/marginal farmers, providing personalized crop recommendations, pest alerts, and yield forecasts via app, SMS, or voice in local languages.
+The proposed solution is a **Smart Crop Advisory System** that helps farmers make better decisions using digital tools.  
+It brings together crop advisory, soil and weather analysis, pest detection, and market insights into one platform.
+  
+
+---
 
 ## Technical Approach
- Modular stack with React Native frontend (mobile app/SMS via Twilio), Node.js/Flask backend, MongoDB/PostgreSQL data layer, and AWS/Google Cloud for hosting. Offline sync using IndexedDB/Service Workers.
-Data Pipeline: Ingest farmer inputs (GPS, soil metrics) + external APIs (OpenWeatherMap for $r, t$; ISRO Bhuvan for imagery). ETL with Apache Airflow for cleaning and feature engineering (e.g., NPK levels, rainfall $r > 500$ mm).
-## Feasibility and Viability
-Supervised learning (e.g., Random Forest or XGBoost) for crop recommendation. For instance, train on datasets like historical yield data from FAO or national agricultural boards.
-## Impact and Benefits
-A multi-criteria decision model (e.g., Analytic Hierarchy Process) combines factors like climate match, soil compatibility, and economic viability.
+The system uses a modular design with different services connected through an API Gateway.
 
+- **Technologies**  
+  - Backend: Python (Django/Flask)  
+  - Frontend: JavaScript (React)  
+  - Databases: PostgreSQL, MongoDB, Redis/Cloud Storage  
+  - AI/ML: For pest and disease detection from images  
+  - APIs: Weather updates, market price feeds  
+
+- **Methodology**  
+  1. Farmers use the **mobile app or USSD service** to raise queries.  
+  2. Requests go through an **API Gateway** for routing and authentication.  
+  3. The request is sent to the right **backend service** (crop advisory, pest detection, weather/soil, market monitoring).  
+  4. Each service connects to its own **database** for storing and retrieving information.  
+  5. The processed result is sent 
+## Feasibility and Viability
+
+### Feasibility
+The system is realistic since it uses already available technologies, cloud platforms, and APIs.  
+It requires moderate infrastructure and can be scaled as needed.
+
+---
+
+### Challenges
+- Poor internet connectivity in rural regions.  
+- Farmers not fully comfortable with smartphone apps.  
+- High accuracy needed for AI-based pest detection.  
+
+---
+
+### Solutions
+- **USSD support** for non-smartphone users.  
+- **Multilingual simple UI** for ease of use.  
+- **Collaboration with agricultural research institutions** for reliable datasets.  
+
+---
+
+## Impact and Benefits
+
+### Impact on Farmers
+Farmers gain quick access to reliable crop advice and market updates.  
+
+### Social Benefits
+Builds confidence among farmers by giving them direct access to information, reducing dependence on intermediaries.  
+
+### Economic Benefits
+- Higher crop yields due to better planning.  
+- Better income by selling at favorable times and markets.  
+
+### Environmental Benefits
+- Reduced overuse of pesticides and fertilizers.  
+- Prevents large-scale crop loss through early disease detection.  
+## flowchart
+<img width="1475" height="867" alt="Screenshot 2025-09-26 124435" src="https://github.com/user-attachments/assets/e9501b1e-3a94-48b1-a151-047bb738bd58" />
+
+
+---
 
 ## Research and References
-A multi-criteria decision model (e.g., Analytic Hierarchy Process) combines factors like climate match, soil compatibility, and economic viability.
+- [NABARD Annual Report 2022](https://www.nabard.org/)  
+- [Indian Agricultural Research Institute (ICAR)](https://www.icar.org.in/)  
+- [FAO – ICT in Agriculture](https://www.fao.org/ict4ag/en/)  
